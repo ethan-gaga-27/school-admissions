@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Apply to a school, submit learner details, and follow your admission application." />
+  <meta name="theme-color" content="#153f35" />
+  <title>The Suite School Rwanda | Admissions</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="The Suite School Rwanda admissions home">
+      <span class="brand-mark">I</span>
+      <span><strong id="brand-name">The Suite School Rwanda</strong><small>Admissions portal</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <button class="nav-button active" data-view="apply">Apply</button>
+      <button class="nav-button" data-view="track">My application</button>
+      <button class="nav-button" data-view="admin">School office</button>
+    </nav>
+    <span class="academic-year">2026 / 2027 admissions</span>
+  </header>
+
+  <main>
+    <section class="view" id="apply-view">
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="overline"><span class="live-dot"></span> Admissions are open</span>
+          <h1>A bright start<br />begins <em>here.</em></h1>
+          <p id="school-description">A welcoming place to learn, grow and build a strong foundation for the future.</p>
+          <a class="button button-light" href="#application-form">Start an application <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="sun"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="book book-back"></div><div class="book book-front"></div>
+          <div class="art-caption"><span>LEARN</span><span>GROW</span><span>THRIVE</span></div>
+        </div>
+      </section>
+
+      <div class="page-content">
+        <div class="intro-row">
+          <div><span class="section-label">YOUR NEXT CHAPTER</span><h2>Join our school community</h2></div>
+          <p>Complete the form below. The school office will review your application and contact you using the details provided.</p>
+        </div>
+
+        <div class="application-layout">
+          <form id="application-form" class="card application-form">
+            <div class="form-heading"><span class="step-number">01</span><div><h3>Learner information</h3><p>Tell us about the student applying.</p></div></div>
+            <div class="form-grid">
+              <label class="field wide">Learner's full name <span class="required">*</span><input name="learnerName" required maxlength="100" placeholder="Enter the name on the learner's documents" /></label>
+              <label class="field">Date of birth <span class="required">*</span><input name="dateOfBirth" type="date" required /></label>
+              <label class="field">Class applying for <span class="required">*</span><select name="grade" required><option value="">Select a class</option><option>Nursery</option><option>Primary 1</option><option>Primary 2</option><option>Primary 3</option><option>Primary 4</option><option>Primary 5</option><option>Primary 6</option><option>Secondary 1</option><option>Secondary 2</option><option>Secondary 3</option><option>Secondary 4</option><option>Secondary 5</option><option>Secondary 6</option></select></label>
+            </div>
+
+            <div class="form-heading section-divider"><span class="step-number">02</span><div><h3>Parent or guardian</h3><p>How can the school reach you?</p></div></div>
+            <div class="form-grid">
+              <label class="field">Parent / guardian name <span class="required">*</span><input name="guardianName" required maxlength="100" placeholder="Full name" /></label>
+              <label class="field">Phone number <span class="required">*</span><input name="phone" type="tel" required maxlength="30" placeholder="+250 7XX XXX XXX" /></label>
+              <label class="field wide">Email address <span class="optional">(optional)</span><input name="email" type="email" maxlength="120" placeholder="you@example.com" /></label>
+            </div>
+
+            <div class="form-heading section-divider"><span class="step-number">03</span><div><h3>Required documents</h3><p>Choose clear copies of the learner's documents.</p></div></div>
+            <div class="form-grid">
+              <label class="field upload-field">Previous report card <span class="required">*</span><input name="reportCard" type="file" accept=".pdf,.jpg,.jpeg,.png" required /><small>PDF or image · 10 MB maximum</small></label>
+              <label class="field upload-field">Registration letter <span class="required">*</span><input name="registrationLetter" type="file" accept=".pdf,.jpg,.jpeg,.png" required /><small>PDF or image · 10 MB maximum</small></label>
+              <label class="field wide">Urubuto Pay payment reference <span class="optional">(optional)</span><input name="paymentReference" maxlength="80" placeholder="Enter a reference after paying the registration fee" /><small>Pay using your usual Urubuto Pay channel, then enter its reference. This prototype does not process payments.</small></label>
+            </div>
+            <label class="consent"><input name="consent" type="checkbox" required /><span>I confirm that the information provided is accurate and consent to the school contacting me about this application.</span></label>
+            <div class="notice notice-warm"><span aria-hidden="true">!</span><p><strong>Prototype notice:</strong> application details are saved only in this browser. Selected document names are recorded, but files are not uploaded or shared with the school.</p></div>
+            <p class="form-error hidden" id="application-error" role="alert"></p>
+            <button type="submit" class="button button-primary submit-button">Submit application <span aria-hidden="true">→</span></button>
+          </form>
+
+          <aside class="side-column">
+            <section class="card fee-card">
+              <span class="section-label">APPLICATION FEE</span>
+              <div class="fee-amount" id="registration-fee">10,000 <span>RWF</span></div>
+              <p>Registration fee for each learner application.</p>
+              <div class="payment-mark"><span class="payment-icon">U</span><span><strong>Urubuto Pay</strong><small>Pay via your usual channel</small></span></div>
+              <p class="fee-footnote">Enter your payment reference in the form. Payment is not collected or verified by this demo.</p>
+            </section>
+            <section class="card checklist-card">
+              <span class="section-label">BEFORE YOU APPLY</span>
+              <h3>Have these ready</h3>
+              <div class="check-row"><span>✓</span><p>Learner's report card</p></div>
+              <div class="check-row"><span>✓</span><p>Registration letter</p></div>
+              <div class="check-row"><span>✓</span><p>Parent or guardian phone number</p></div>
+              <div class="check-row"><span>✓</span><p>Urubuto Pay payment reference</p></div>
+            </section>
+            <div class="help-card"><span>NEED HELP?</span><p>Contact the school office using the phone number provided to your family.</p></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="view hidden page-content inner-page" id="track-view">
+      <div class="page-title"><span class="section-label">APPLICATIONS</span><h1>Your application</h1><p>Check the admission status of applications saved in this browser.</p></div>
+      <div class="toolbar-row">
+        <label class="search-box" aria-label="Search your applications">
+          <span>⌕</span>
+          <input id="parent-search" type="search" placeholder="Search by learner, guardian or class" />
+        </label>
+      </div>
+      <div id="parent-applications" class="application-list"></div>
+      <div id="parent-empty" class="card empty-card"><span class="empty-icon">✳</span><h3>No applications yet</h3><p>Once you submit an application, its status will appear here.</p><button class="button button-primary" data-view="apply">Start an application</button></div>
+      <div class="notice notice-warm"><span aria-hidden="true">!</span><p>This is a local prototype. Application records are not sent to a real school or shared across devices.</p></div>
+    </section>
+
+    <section class="view hidden page-content inner-page" id="admin-view">
+      <div class="page-title"><span class="section-label">SCHOOL OFFICE</span><h1>Admissions overview</h1><p>Review applications and update the public admissions information on this device.</p></div>
+      <div class="notice notice-warm admin-notice"><span aria-hidden="true">!</span><p><strong>Demo mode:</strong> this office view has no staff login or access control. Do not enter real student records in this prototype.</p></div>
+      <div class="admin-stats">
+        <article class="card metric-card"><span>Total applications</span><strong id="metric-total">0</strong><small>All applications in this browser</small></article>
+        <article class="card metric-card"><span>Awaiting review</span><strong id="metric-pending">0</strong><small>New and under review</small></article>
+        <article class="card metric-card"><span>Accepted</span><strong id="metric-accepted">0</strong><small>Admission decisions made</small></article>
+      </div>
+      <section class="card office-card">
+        <div class="card-title-row"><div><span class="section-label">APPLICATION QUEUE</span><h2>Recent applications</h2></div><div class="filter-row"><label class="search-box compact" aria-label="Search office applications"><span>⌕</span><input id="office-search" type="search" placeholder="Search applications" /></label><label class="filter-label">Filter <select id="status-filter"><option value="all">All statuses</option><option value="Submitted">Submitted</option><option value="Reviewing">Reviewing</option><option value="Accepted">Accepted</option><option value="Not accepted">Not accepted</option></select></label></div></div>
+        <div id="office-applications" class="office-list"></div>
+        <div id="office-empty" class="empty-card empty-inline"><span class="empty-icon">✳</span><h3>No applications to review</h3><p>Submitted applications will appear here.</p></div>
+      </section>
+      <section class="card settings-card">
+        <div class="card-title-row"><div><span class="section-label">PUBLIC SCHOOL PAGE</span><h2>Admissions information</h2><p>Update the school name, welcome message and registration fee.</p></div></div>
+        <form id="settings-form" class="settings-form">
+          <label class="field">School name<input name="schoolName" required maxlength="80" /></label>
+          <label class="field">Registration fee (RWF)<input name="fee" type="number" min="0" step="1" required /></label>
+          <label class="field wide">Welcome message<textarea name="description" required maxlength="300" rows="3"></textarea></label>
+          <div class="form-actions"><span class="form-success hidden" id="settings-success" role="status">School information saved on this device.</span><button class="button button-primary" type="submit">Save school information</button></div>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>© <span id="current-year"></span> <span id="footer-school-name">The Suite School Rwanda</span></span><span>A thoughtful start for every learner.</span><span class="footer-demo">LOCAL DEMO · NOT A LIVE SCHOOL PORTAL</span></footer>
+  <div class="toast hidden" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

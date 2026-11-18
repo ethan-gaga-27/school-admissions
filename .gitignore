@@ -1,0 +1,4 @@
+# .gitignore
+*.zip
+*.log
+.DS_Store
